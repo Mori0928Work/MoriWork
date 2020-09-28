@@ -1,0 +1,247 @@
+@import url(sanitize.css);
+html{
+    outline: none;
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    background-color: #85c8ff;
+    font-family: 'Bungee Hairline', cursive;
+    color:#333;
+    overflow-x: hidden;
+}
+.wave{
+    min-height: 100%;
+    width: 100%; 
+    position: absolute; 
+    top: 0;
+    right: 0;
+    background-image: url("../images/wave.png");
+    background-repeat: repeat;
+    animation-timing-function: linear;
+    animation-duration: 90s;
+    animation-iteration-count: infinite;  
+}
+.wave1{
+    z-index: -1;
+    animation-name: wave1;
+    position: fixed;
+}
+.wave2{
+    z-index: -2;
+    animation-name: wave2;
+    transform: scale(-1,1);
+    position: fixed;
+}
+@keyframes wave1{
+    0%{
+        background-position: 0 0;
+        opacity: 0.4;
+    }
+    50%{
+        background-position: 50% 50%;
+        opacity: 0.6;
+    }
+    100%{
+        background-position: 100% 100%;
+        opacity: 0.4;
+    }
+}
+@keyframes wave2{
+    0%{
+        background-position: -20% 0;
+        opacity: 0.6;
+    }
+    50%{
+        background-position: -70% -50%;
+        opacity: 0.4;
+    }
+    100%{
+        background-position: -120% -100%;
+        opacity: 0.6;
+    }
+}
+.top{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    border:7px  #333 double;
+    border-right: none;
+    border-left: none;
+    margin: 50px auto;
+    padding: 10px 250px;
+}
+.top_text{
+    font-size: 40px;
+    border-top: #333 dotted;
+    border-bottom: #333 dotted;
+    position: relative;
+    animation: top_text_anime 1s;    
+}
+@keyframes top_text_anime{
+    0%{
+        opacity: 0;
+        top: 50px;
+    }
+    100%{
+        opacity: 1;
+        top: 0;
+    }
+}
+.top_mizukusa{
+    margin-left: auto;
+    width:250px;
+    height:250px;
+    opacity: .7;
+    background-image: url("../images/mizukusa2.png");
+    background-size: cover;
+    transition: 1s;
+}
+.top_mizukusa:hover{
+    cursor: pointer;
+    opacity: .5;
+    background-image: url("../images/mizukusa1.png");
+}
+.top_fish{
+    width:250px;
+    height:250px;
+    opacity: .7;
+    background-image: url("../images/fish_red.png");
+    background-size: cover;
+    transition: 1s;
+}
+.top_fish:hover{
+    cursor: pointer;
+    opacity: .5;
+    transform: translate3d(0,4px,0);
+    transform:rotate(-10deg);
+}
+.ripple{
+    width: 0px;
+    height: 0px;
+    border:7px double #85c8ff;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -3;
+    transform: translate(-50%,-50%);
+    outline: none;
+    pointer-events: none;
+    animation: ripple 1.5s;
+}
+@keyframes ripple{
+    0%{
+        opacity: 1;
+        width: 0;
+        height: 0;
+    }
+    30%{
+        border-color: #FFFFFF;        
+    }
+    100%{
+        opacity: 0;
+        width: 250px;
+        height: 250px;
+        transform: translate(-50%,-50%);
+    }
+
+}
+.brank{
+    width: 25px;
+    height: 25px;
+}
+a{
+    color:#333;
+    font-size: 25px;
+    font-weight: bold;
+}
+ul{
+    font-weight: bolder;
+    list-style: none;
+    flex-basis: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+ul li:nth-of-type(2) {
+    margin-left: 30%;
+}
+.btn{
+    background-color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    position: relative;
+    color: #333;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.btn::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background: #333;
+    transform: scale(0, 1);
+    transform-origin: right top;
+    transition: transform .4s;
+}
+.btn:hover::after {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+.content{
+    font-family: 'Noto Serif JP', serif;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    border:7px  #333 double;
+    border-right: 5px solid #333;
+    border-left: 5px solid #333;
+    margin: 50px 50px;
+    padding: 10px 300px;
+    font-size: 20px;
+
+    position: relative;
+    animation: content_text_anime 1s;
+}
+@keyframes content_text_anime{
+    0%{
+        opacity: 0;
+        top: 10px;
+    }
+    100%{
+        opacity: 1;
+        top: 0;
+    } 
+}
+.form{margin: 20px;
+    display: block;
+    justify-content: left;
+}
+.form_text{
+    border-left: 5px double #333;
+}
+.form_input{
+    border: none;
+    border: #333 double 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+}
+input{
+    width: 50%;
+    padding: 8px;
+}
+textarea{
+    width: 100%;
+}
+button{
+    width: 50%;
+    background-color: #333;
+    color:#000 ;
+    padding: 15px;
+}
+.under_fish{
+    text-align: center;
+	margin:auto;
+}

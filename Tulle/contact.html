@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Tulle -チュール-</title>
+    <link rel="stylesheet" href="css/indexCSS.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="top">
+        <div class="top_text">
+            <h1>T U L L E</h1>
+        </div>
+        <div class="top_mizukusa"></div>
+        <div class="top_fish"></div>
+    </div>
+        <div class="brank" id="jump"></div>    
+    <header>
+        <ul>
+            <li><a href="index.html" class="btn btnhome">Home</a></li>
+            <li><a href="concept.html#jump" class="btn concept">Concept</a></li>
+            <li><a href="menu.html#jump" class="btn menu">Menu</a></li>
+            <li><a href="gallery.html#jump" class="btn gallery">Gallery</a></li>
+            <li><a href="contact.html#jump" class="btn contact">Contact</a></li>
+            <li><a href="access.html#jump" class="btn access">Access...?</a></li>
+        </ul>
+    </header>
+
+    <div class="content">
+        <div class="content_text">
+            <h2>恐れ入りますが、以下のフォームにご記入頂き、送信していただけると幸いです。</h2>
+            <p>※現在の所送信できません。</p>
+  
+                <div class="form">
+
+                    <label for="name" class="form form_text">お名前</label>
+                    <input type="text" id="name" name="name" class="form form_input" placeholder="例)山田　太郎"　required>
+
+                    <label for="email" class="form form_text">メールアドレス</label>
+                    <input type="email" id="email" name="email" class="form form_input"　placeholder="sample@sample.com" required>
+
+                    <label for="message" class="form form_text">お問い合わせ内容</label>
+                    <textarea name="message" id="message" rows="10" class="form form_input" placeholder="お問い合わせ内容" required></textarea>
+                    <button type="submit" class="form form_input">送信する</button>
+                </div>
+        </div>
+        
+    </div>
+
+    <div class="ripple"></div>  
+    <script type="text/javascript" src="javascript/pageSelect.js"></script> 
+    <script type="text/javascript" src="javascript/ripple.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</body>
+</html>
