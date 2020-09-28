@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PortFolio</title>
+		<link rel="stylesheet" href="test01css.css">
+	</head>
+	<body>
+		<div class="top">
+			<h1>P o r t F o l i o</h1>
+			<p>MadeBy森内</p>
+		</div>
+			<p>閲覧ありがとうございます</p>
+		<div class="tab">
+			<input id="about" type="radio" name="tab_item" checked>
+			<label class="tab_item" for="about">about</label>
+
+			<input id="work" type="radio" name="tab_item">
+			<label class="tab_item" for="work">work</label>
+
+			<input id="contact" type="radio" name="tab_item">
+			<label class="tab_item" for="contact">contact</label>
+
+		<div class="tab_content" id="about_content">
+			<div class="tab_content_text">
+				<div class="text">
+					初めまして。<br>
+					東京でSEになることを目標に、職業訓練校で日々学習しています。<br>
+					勉強している言語:Java,HTML CSS,VBA<br>
+					勉強したい言語:JavaScript,PHP,Python<br>
+				</div>
+			</div>
+		</div>
+		<div class="tab_content" id="work_content">
+			<div class="tab_content_text">
+				<div class="text">
+					<h2>制作したもの</h2>
+					<a href="../Tulle/index.html">・架空のカフェのWEBサイト</a><br>
+					<h3>現在制作途中のもの</h3>
+					・架空のファンサイト<br>
+					<h4>制作予定の物</h4>
+					・キーボードを使ったツイスターゲームのようなブラウザゲーム<br>
+				</div>
+			</div>
+		</div>
+		<div class="tab_content" id="contact_content">
+			<div class="tab_content_text">
+				<div class="text">
+					<div class="form">
+						申し訳ありません。現在このフォームは使えません。<br>
+						PHPの学習を早急に進めます。<br>
+						<div class="space"></div>
+						<label for="name" class="form form_text">お名前</label>
+						<input type="text" id="name" name="name" class="form form_input" placeholder="例)山田　太郎"　required>					<div class="space"></div>
+						<label for="email" class="form form_text">メールアドレス</label>
+						<input type="email" id="email" name="email" class="form form_input"　placeholder="sample@sample.com" required>
+						<div class="space"></div>
+						<label for="message" class="form form_text">お問い合わせ内容</label>
+						<textarea name="message" id="message" rows="10" class="form form_input" placeholder="お問い合わせ内容" required></textarea>
+						<div class="space"></div>
+						<div class="form_send">
+							<button type="submit" class="form">送信</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
